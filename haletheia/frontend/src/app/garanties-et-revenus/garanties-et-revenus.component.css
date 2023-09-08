@@ -1,0 +1,37 @@
+/* Espacement général */
+form {
+  margin: 20px;
+}
+
+/* Espacement entre les éléments du formulaire */
+.form-group,
+.form-check {
+  margin-bottom: 20px;
+}
+
+/* Style des cases à cocher */
+.form-check-input {
+  margin-right: 10px;
+}
+
+/* Style des zones de texte */
+.form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style du bouton */
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+/* Hover effect sur le bouton */
+.btn:hover {
+  background-color: #0056b3;
+}
+
