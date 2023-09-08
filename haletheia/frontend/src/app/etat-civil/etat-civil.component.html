@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Client</h1>
+      <mat-form-field>
+        <mat-label>Nom</mat-label>
+        <input matInput [(ngModel)]="etatCivil.nom" name="nom">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Prénom</mat-label>
+        <input matInput [(ngModel)]="etatCivil.prenom" name="prenom">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Date de naissance</mat-label>
+        <input matInput [(ngModel)]="etatCivil.date_naissance" name="date_naissance" type="date">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Lieu de naissance</mat-label>
+        <input matInput [(ngModel)]="etatCivil.lieu_naissance" name="lieu_naissance">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Téléphone</mat-label>
+        <input matInput [(ngModel)]="etatCivil.telephone" name="telephone">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="etatCivil.email" name="email">
+      </mat-form-field>
+    </div>
+    
+    <div class="col">
+      <h1>Conjoint</h1>
+      <mat-form-field>
+        <mat-label>Nom</mat-label>
+        <input matInput [(ngModel)]="conjoint.nom" name="conjointNom">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Prénom</mat-label>
+        <input matInput [(ngModel)]="conjoint.prenom" name="conjointPrenom">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Date de naissance</mat-label>
+        <input matInput [(ngModel)]="conjoint.date_naissance" name="conjointDate_naissance" type="date">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Lieu de naissance</mat-label>
+        <input matInput [(ngModel)]="conjoint.lieu_naissance" name="conjointLieu_naissance">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Téléphone</mat-label>
+        <input matInput [(ngModel)]="conjoint.telephone" name="conjointTelephone">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="conjoint.email" name="conjointEmail">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h2>Informations communes</h2>
+      <mat-form-field>
+      <mat-label>Situation matrimoniale</mat-label>
+      <mat-select [(ngModel)]="situationMatrimoniale">
+        <mat-option *ngFor="let option of situationMatrimonialeOptions" [value]="option">
+          {{ option }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="situationMatrimoniale === 'Marié' || situationMatrimoniale === 'Pacsé'">
+      <mat-label>Régime matrimonial</mat-label>
+      <mat-select [(ngModel)]="regimeMatrimonial">
+        <mat-option *ngFor="let option of regimeMatrimonialOptions" [value]="option">
+          {{ option }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
+  </div> 
+  <div class="row">
+    <div class="col">
+      <h2>Enfants</h2>
+      <div *ngFor="let enfant of enfants; let i = index">
+        <h3>Enfant {{ i + 1 }}</h3>
+        <mat-form-field>
+        <mat-label>Nom</mat-label>
+          <input matInput [(ngModel)]="enfant.nom" name="enfantNom{{i}}">
+        </mat-form-field>
+        <mat-form-field>
+        <mat-label>Prénom</mat-label>
+          <input matInput [(ngModel)]="enfant.prenom" name="enfantPrenom{{i}}">
+        </mat-form-field>
+        <mat-form-field>
+        <mat-label>Date de naissance</mat-label>
+        <input matInput [(ngModel)]="etatCivil.date_naissance" name="date_naissance" type="date">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Lieu de naissance</mat-label>
+        <input matInput [(ngModel)]="etatCivil.lieu_naissance" name="lieu_naissance">
+      </mat-form-field>
+        <!-- ... Et ainsi de suite pour les autres champs de l'enfant -->
+      <button mat-raised-button (click)="supprimerEnfant(i)">Supprimer cet enfant</button>
+    </div>
+    <button mat-raised-button (click)="ajouterEnfant()">Ajouter un enfant</button>
+    </div>
+  </div>
+</div>

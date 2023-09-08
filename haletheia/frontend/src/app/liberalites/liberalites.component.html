@@ -1,0 +1,67 @@
+<!-- Liberalites Component -->
+<div class="container">
+  <h1>Libéralités</h1>
+
+  <!-- Société d'acquêts -->
+  <div class="form-group">
+    <mat-checkbox [(ngModel)]="liberalite.societeAcquets">Société d'acquêts</mat-checkbox>
+    <mat-form-field *ngIf="liberalite.societeAcquets" appearance="outline">
+      <mat-label>Choisir un bien</mat-label>
+      <mat-select [(ngModel)]="liberalite.selectedBien">
+        <mat-option *ngFor="let bien of liberalite.biens" [value]="bien">{{ bien }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <!-- Clause d'attribution intégrale -->
+  <div class="form-group">
+    <mat-checkbox [(ngModel)]="liberalite.attributionIntegrale">Clause d'attribution intégrale</mat-checkbox>
+    <mat-form-field *ngIf="liberalite.attributionIntegrale" appearance="outline">
+      <mat-label>Précisions</mat-label>
+      <textarea matInput [(ngModel)]="liberalite.attributionIntegraleDetails"></textarea>
+    </mat-form-field>
+  </div>
+
+  <!-- Clause de préciput -->
+  <div class="form-group">
+    <mat-checkbox [(ngModel)]="liberalite.clausePreciput">Clause de préciput</mat-checkbox>
+    <mat-form-field *ngIf="liberalite.clausePreciput" appearance="outline">
+      <mat-label>Précisions</mat-label>
+      <textarea matInput [(ngModel)]="liberalite.clausePreciputDetails"></textarea>
+    </mat-form-field>
+  </div>
+
+  <!-- Autres options de libéralités -->
+  <div class="form-group">
+    <mat-checkbox [(ngModel)]="liberalite.donation_simple">Donation simple</mat-checkbox>
+  </div>
+
+  <div class="form-group">
+    <mat-checkbox [(ngModel)]="liberalite.donation_partage">Donation-partage</mat-checkbox>
+  </div>
+
+  <div class="form-group">
+    <mat-checkbox [(ngModel)]="liberalite.legs">Legs</mat-checkbox>
+  </div>
+
+  <div class="form-group">
+    <mat-checkbox [(ngModel)]="liberalite.donation_dernier_vivant">Donation au dernier vivant</mat-checkbox>
+  </div>
+
+  <div class="form-group">
+    <mat-checkbox [(ngModel)]="liberalite.testament">Testament</mat-checkbox>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field appearance="outline">
+      <mat-label>Notaire</mat-label>
+      <input matInput [(ngModel)]="liberalite.notaire">
+    </mat-form-field>
+  </div>
+
+  <!-- Bouton pour ajouter les libéralités -->
+  <div class="form-group">
+    <button mat-raised-button color="primary" (click)="ajouterLiberalites()">Ajouter les libéralités</button>
+  </div>
+</div>
+

@@ -1,0 +1,18 @@
+<form (ngSubmit)="ajouterConnaissancesFinancieres()">
+  <h3>Connaissances Financières et Profil Épargnant:</h3>
+
+  <label for="experience_investissement">Expérience en investissement:</label>
+  <input id="experience_investissement" [(ngModel)]="connaissancesFinancieres.experience_investissement" name="experience_investissement">
+
+  <label for="objectif_investissement">Objectif d'investissement:</label>
+  <input id="objectif_investissement" [(ngModel)]="connaissancesFinancieres.objectif_investissement" name="objectif_investissement">
+
+  <label for="horizon_investissement">Horizon d'investissement:</label>
+  <input id="horizon_investissement" [(ngModel)]="connaissancesFinancieres.horizon_investissement" name="horizon_investissement">
+
+  <label for="tolerance_risque">Tolérance au risque:</label>
+  <input id="tolerance_risque" [(ngModel)]="connaissancesFinancieres.tolerance_risque" name="tolerance_risque">
+
+  <button type="submit">Ajouter</button>
+</form>
+

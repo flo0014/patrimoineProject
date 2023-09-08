@@ -1,0 +1,30 @@
+<form (ngSubmit)="ajouterBesoinsClient()">
+  <h3>Besoins du Client:</h3>
+
+  <label for="argent_liquide">Argent liquide nécessaire:</label>
+  <input id="argent_liquide" [(ngModel)]="besoinsClient.argent_liquide" name="argent_liquide">
+
+  <label for="budget_familial">Budget familial actuel:</label>
+  <input id="budget_familial" [(ngModel)]="besoinsClient.budget_familial" name="budget_familial">
+
+  <label for="incapacite">Incapacité/Invalidité:</label>
+  <input id="incapacite" [(ngModel)]="besoinsClient.incapacite" name="incapacite">
+
+  <label for="retraite">Retraite en revenus et capitaux:</label>
+  <input id="retraite" [(ngModel)]="besoinsClient.retraite" name="retraite">
+
+  <label for="revenus_necessaires">Revenus familiaux nécessaires:</label>
+  <input id="revenus_necessaires" [(ngModel)]="besoinsClient.revenus_necessaires" name="revenus_necessaires">
+
+  <label for="etudes_enfants">Études et installation des enfants:</label>
+  <input id="etudes_enfants" [(ngModel)]="besoinsClient.etudes_enfants" name="etudes_enfants">
+
+  <label for="dependance">Dépendance/perte d'autonomie:</label>
+  <input id="dependance" [(ngModel)]="besoinsClient.dependance" name="dependance">
+
+  <label for="complementaire_sante">Complémentaire santé:</label>
+  <input id="complementaire_sante" [(ngModel)]="besoinsClient.complementaire_sante" name="complementaire_sante">
+
+  <button type="submit">Ajouter</button>
+</form>
+

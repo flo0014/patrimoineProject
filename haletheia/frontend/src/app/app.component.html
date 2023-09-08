@@ -1,0 +1,68 @@
+<mat-toolbar color="primary">
+  <span> Aléthéia - Gestion de Patrimoine</span>
+</mat-toolbar>
+
+<mat-toolbar color="primary">
+  <span class="spacer"></span>
+  <!-- boutton ici -->
+</mat-toolbar>
+
+<!-- Barre de navigation pour les phases -->
+<mat-tab-group>
+
+  <!-- Phase 1 -->
+  <mat-tab label="Phase 1: Découverte">
+    <mat-tab-group>
+
+      <!-- État Civil -->
+      <mat-tab label="État Civil">
+        <app-etat-civil></app-etat-civil>
+      </mat-tab>
+
+      <!-- Libéralités -->
+      <mat-tab label="Libéralités">
+        <app-liberalites></app-liberalites>
+      </mat-tab>
+
+      <!-- Carrière Professionnelle -->
+      <mat-tab label="Carrière Professionnelle">
+        <app-carriere-professionnelle></app-carriere-professionnelle>
+      </mat-tab>
+
+      <!-- Garanties Personnelles et Revenus -->
+      <mat-tab label="Garanties et Revenus">
+        <app-garanties-et-revenus></app-garanties-et-revenus>
+      </mat-tab>
+
+      <!-- Patrimoine Immobilier -->
+      <mat-tab label="Patrimoine Immobilier">
+        <app-patrimoine-immobilier></app-patrimoine-immobilier>
+      </mat-tab>
+
+      <!-- Patrimoine Mobilier -->
+      <mat-tab label="Patrimoine Mobilier">
+        <app-patrimoine-mobilier></app-patrimoine-mobilier>
+      </mat-tab>
+
+      <!-- Connaissances Financières -->
+      <mat-tab label="Connaissances Financières">
+        <app-connaissances-financieres></app-connaissances-financieres>
+      </mat-tab>
+
+      <!-- Besoins du Client -->
+      <mat-tab label="Besoins du Client">
+        <app-besoins-client></app-besoins-client>
+      </mat-tab>
+
+    </mat-tab-group>
+  </mat-tab>
+
+  <!-- Phase 2 -->
+  <mat-tab label="Phase 2: Restitution">
+    <mat-tab-group>
+      <!-- La phase 2 est vide pour le moment -->
+    </mat-tab-group>
+  </mat-tab>
+
+</mat-tab-group>
+

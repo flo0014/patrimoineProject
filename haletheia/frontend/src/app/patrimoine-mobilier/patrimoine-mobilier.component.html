@@ -1,0 +1,39 @@
+<form (ngSubmit)="ajouterPatrimoineMobilier()">
+  <h3>Patrimoine Mobilier:</h3>
+
+  <h4>Court terme :</h4>
+  <label for="livret">Livret:</label>
+  <input id="livret" [(ngModel)]="patrimoineMobilier.livret" name="livret">
+
+  <label for="cat">CAT:</label>
+  <input id="cat" [(ngModel)]="patrimoineMobilier.cat" name="cat">
+
+  <label for="monetaire">Monétaire:</label>
+  <input id="monetaire" [(ngModel)]="patrimoineMobilier.monetaire" name="monetaire">
+
+  <h4>Moyen terme :</h4>
+  <label for="del">DEL:</label>
+  <input id="del" [(ngModel)]="patrimoineMobilier.del" name="del">
+
+  <label for="pel">PEL:</label>
+  <input id="pel" [(ngModel)]="patrimoineMobilier.pel" name="pel">
+
+  <h4>Long terme :</h4>
+  <label for="pea">PEA:</label>
+  <input id="pea" [(ngModel)]="patrimoineMobilier.pea" name="pea">
+
+  <label for="ct">CT:</label>
+  <input id="ct" [(ngModel)]="patrimoineMobilier.ct" name="ct">
+
+  <label for="assurance_vie">Assurance Vie:</label>
+  <input id="assurance_vie" [(ngModel)]="patrimoineMobilier.assurance_vie" name="assurance_vie">
+
+  <label for="per">PER:</label>
+  <input id="per" [(ngModel)]="patrimoineMobilier.per" name="per">
+
+  <label for="pep">PEP:</label>
+  <input id="pep" [(ngModel)]="patrimoineMobilier.pep" name="pep">
+
+  <button type="submit">Ajouter</button>
+</form>
+
