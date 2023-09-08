@@ -10,7 +10,7 @@
 
 - Je développe dans un environement séparé de mon environement de production :
     ``` $ python3 -m venv patrimoineProject ```
-    
+    ``` $ bin/activate  ```
 
 ## Changelog 
 
