@@ -1,6 +1,6 @@
 # Alétheia - Gestion de Patrimoine
 
-- Logiciel dédié à la réalisation de bilan sociaux et patrimoniaux, sur la base des solutions et de la fiscalité existant en france.
+- Logiciel dédié à la réalisation de bilan sociaux et patrimoniaux, sur la base des solutions et de la fiscalité existant en France.
 
 - Le logiciel est dévellopé en deux parties :
     - Backend : Python + Flask
