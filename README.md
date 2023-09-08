@@ -9,8 +9,9 @@
 - Soyez indulgent, c'est la première fois que je code depuis 2005. Toute les petites mains suplémentaires sont les bienvenues ;p
 
 - Je développe dans un environement séparé de mon environement de production :
-    ``` $ python3 -m venv patrimoineProject ```
-    ``` $ bin/activate  ```
+    
+   - ``` $ python3 -m venv patrimoineProject ```
+   - ``` $ bin/activate  ```
 
 ## Changelog 
 
