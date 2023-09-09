@@ -10,10 +10,26 @@
 
 - Je développe dans un environement séparé de mon environement de production :
     
-   - ``` $ python3 -m venv patrimoineProject ```
-   - ``` $ bin/activate  ```
+    - ``` $ python3 -m venv patrimoineProject ```
+    - ``` $ bin/activate  ```
 
 ## Changelog 
+
+### 09/09/2023
+
+- Mise place de Angular-Material pour la présentation du Frontend
+    - Application à la page général
+    - Apllication aux formulaires des onglets:
+        - État-Civil
+        - Liberalités
+        - Carrière Professionnelle
+        - Garanties et Revenus
+        - Patrimoine Immmobiler
+
+À venir :
+    - Application de Mateial à la totalite du frontend
+    - Mise en place du frontend de la "Phase 2 : Résitution"
+    - Travail sur la partie backend lorsque le frontend sera terminé
 
 ### 08/09/2023
 

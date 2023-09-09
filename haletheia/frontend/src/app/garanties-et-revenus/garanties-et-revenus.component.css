@@ -1,37 +1,57 @@
-/* Espacement général */
-form {
+/* Style général du composant */
+.container {
   margin: 20px;
 }
 
-/* Espacement entre les éléments du formulaire */
-.form-group,
-.form-check {
-  margin-bottom: 20px;
+/* Styles pour les étiquettes */
+.label {
+  font-weight: bold;
+  margin-top: 20px;
 }
 
-/* Style des cases à cocher */
-.form-check-input {
-  margin-right: 10px;
-}
-
-/* Style des zones de texte */
-.form-control {
-  padding: 10px;
-  border: 1px solid #ccc;
+/* Styles pour les champs de texte */
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
   border-radius: 4px;
 }
 
-/* Style du bouton */
-.btn {
-  padding: 10px 20px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
+/* Styles pour le bouton d'envoi */
+button {
+  background-color: #4CAF50;
   color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
-/* Hover effect sur le bouton */
-.btn:hover {
-  background-color: #0056b3;
+button:hover {
+  opacity: 0.8;
 }
+
+.form-control {
+    font-size: 16px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
+/* Ajoutez d'autres styles en fonction de vos besoins */
 

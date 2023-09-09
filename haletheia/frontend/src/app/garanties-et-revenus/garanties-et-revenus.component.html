@@ -1,0 +1,87 @@
+<div class="container">
+  <h1>Garanties et Revenus</h1>
+
+  <!-- Revenus -->
+  <h2>Revenus</h2>
+  <div class="form-group">
+    <label for="traitement_salaires">Traitement et Salaires</label>
+    <input type="number" class="form-control" id="traitement_salaires" [(ngModel)]="garantiesRevenus.traitement_salaires">
+  </div>
+  <div class="form-group">
+    <label for="bnc">BNC</label>
+    <input type="number" class="form-control" id="bnc" [(ngModel)]="garantiesRevenus.bnc">
+  </div>
+  <div class="form-group">
+    <label for="bic">BIC</label>
+    <input type="number" class="form-control" id="bic" [(ngModel)]="garantiesRevenus.bic">
+  </div>
+  <div class="form-group">
+    <label for="agricole">Agricole</label>
+    <input type="number" class="form-control" id="agricole" [(ngModel)]="garantiesRevenus.agricole">
+  </div>
+  <div class="form-group">
+    <label for="pension_retraite">Pension de Retraite</label>
+    <input type="number" class="form-control" id="pension_retraite" [(ngModel)]="garantiesRevenus.pension_retraite">
+  </div>
+
+  <!-- Garanties -->
+  <h2>Garanties</h2>
+  <div class="form-group">
+    <label for="temporaire_deces">Temporaire Décès</label>
+    <input type="number" class="form-control" id="temporaire_deces" [(ngModel)]="garantiesRevenus.temporaire_deces">
+  </div>
+  <div class="form-group">
+    <label for="vie_entiere_deces">Vie Entière Décès</label>
+    <input type="number" class="form-control" id="vie_entiere_deces" [(ngModel)]="garantiesRevenus.vie_entiere_deces">
+  </div>
+  <div class="form-group">
+    <label for="arret_travail">Arrêt de Travail</label>
+    <input type="number" class="form-control" id="arret_travail" [(ngModel)]="garantiesRevenus.arret_travail">
+  </div>
+  <div class="form-group">
+    <label for="invalidite">Invalidité</label>
+    <input type="number" class="form-control" id="invalidite" [(ngModel)]="garantiesRevenus.invalidite">
+  </div>
+  <div class="form-group">
+    <label for="sante">Santé</label>
+    <input type="number" class="form-control" id="sante" [(ngModel)]="garantiesRevenus.sante">
+  </div>
+  <div class="form-group">
+    <label for="dependance">Dépendance</label>
+    <input type="number" class="form-control" id="dependance" [(ngModel)]="garantiesRevenus.dependance">
+  </div>
+  <div class="form-group">
+    <label for="retraite">Retraite</label>
+    <input type="number" class="form-control" id="retraite" [(ngModel)]="garantiesRevenus.retraite">
+  </div>
+  <div class="form-group">
+    <label for="etude_enfants">Étude des Enfants</label>
+    <input type="number" class="form-control" id="etude_enfants" [(ngModel)]="garantiesRevenus.etude_enfants">
+  </div>
+  <div class="form-group">
+    <label for="GAV">GAV</label>
+    <input type="number" class="form-control" id="GAV" [(ngModel)]="garantiesRevenus.GAV">
+  </div>
+  <div class="form-group">
+    <label for="obseques">Obsèques</label>
+    <input type="number" class="form-control" id="obseques" [(ngModel)]="garantiesRevenus.obseques">
+  </div>
+  <div class="form-group">
+    <label for="PJ">PJ</label>
+    <input type="number" class="form-control" id="PJ" [(ngModel)]="garantiesRevenus.PJ">
+  </div>
+
+  <!-- Regulatory -->
+  <h2>Réglementaire</h2>
+  <div class="form-group">
+    <label for="residence_fiscale">Résidence Fiscale</label>
+    <input type="text" class="form-control" id="residence_fiscale" [(ngModel)]="garantiesRevenus.residence_fiscale">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="soumis_facta" [(ngModel)]="garantiesRevenus.soumis_facta">
+    <label class="form-check-label" for="soumis_facta">Soumis au FACTA</label>
+  </div>
+
+  <!-- Submit Button -->
+
+

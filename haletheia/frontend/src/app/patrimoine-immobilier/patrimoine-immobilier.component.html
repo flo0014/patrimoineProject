@@ -1,45 +1,533 @@
-<form (ngSubmit)="ajouterPatrimoineImmobilier()">
-  <h3>Patrimoine Immobilier:</h3>
-
-  <h4>Biens d'usage :</h4>
-
-  <label for="residence_principale">Résidence Principale:</label>
-  <input id="residence_principale" [(ngModel)]="patrimoineImmobilier.residence_principale" name="residence_principale">
-
-  <label for="residences_secondaires">Résidences Secondaires:</label>
-  <input id="residences_secondaires" [(ngModel)]="patrimoineImmobilier.residences_secondaires" name="residences_secondaires">
-
-  <label for="autres_biens_usage">Autres:</label>
-  <input id="autres_biens_usage" [(ngModel)]="patrimoineImmobilier.autres_biens_usage" name="autres_biens_usage">
-
-  <h4>Biens de rapport :</h4>
-
-  <label for="immeubles_locatifs">Immeubles Locatifs:</label>
-  <input id="immeubles_locatifs" [(ngModel)]="patrimoineImmobilier.immeubles_locatifs" name="immeubles_locatifs">
-
-  <label for="biens_pro">Biens Professionnels:</label>
-  <input id="biens_pro" [(ngModel)]="patrimoineImmobilier.biens_pro" name="biens_pro">
-
-  <label for="sci">SCI:</label>
-  <input id="sci" [(ngModel)]="patrimoineImmobilier.sci" name="sci">
-
-  <label for="autres_biens_rapport">Autres:</label>
-  <input id="autres_biens_rapport" [(ngModel)]="patrimoineImmobilier.autres_biens_rapport" name="autres_biens_rapport">
-
-  <h4>Financements en cours :</h4>
-
-  <label for="date_debut">Date début assurance de prêt:</label>
-  <input id="date_debut" [(ngModel)]="patrimoineImmobilier.date_debut" name="date_debut">
-
-  <label for="date_fin">Date fin assurance de prêt:</label>
-  <input id="date_fin" [(ngModel)]="patrimoineImmobilier.date_fin" name="date_fin">
-
-  <label for="taeg">TAEG:</label>
-  <input id="taeg" [(ngModel)]="patrimoineImmobilier.taeg" name="taeg">
-
-  <label for="crd">CRD:</label>
-  <input id="crd" [(ngModel)]="patrimoineImmobilier.crd" name="crd">
-
-  <button type="submit">Ajouter</button>
-</form>
+<table class="patrimoine-table">
+  <thead>
+    <tr>
+      <th rowspan="2">Catégorie</th>
+      <th rowspan="2">Détenu par</th>
+      <th rowspan="2">Mode de détention</th>
+      <th rowspan="2">Valeur estimée</th>
+      <th rowspan="2">Valeur d'achat</th>
+      <th rowspan="2">Rapport Mensuel en €</th>
+      <th rowspan="2">Observation</th>
+      <th colspan="9">Crédit</th>
+    </tr>
+    <tr>
+      <th>Organisme</th>
+      <th>Capital emprunté</th>
+      <th>CRD</th>
+      <th colspan="2">Assurance de prêt</th>
+      <th>Date d'emprunt</th>
+      <th>Durée d'emprunt</th>
+      <th>Mensualité</th>
+      <th>TAEG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tbody>
+  <!-- Catégorie Générale: Biens d'usages -->
+    <tr>
+      <td colspan="16" class="category-header">Biens d'usages</td>
+    </tr>
+    <!-- Biens d'usages: Résidence Principale -->
+    <tr>
+      <td>Résidence Principale</td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+      <td>Résidence secondaire</td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+      <td>Autre</td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+      <td>Autre</td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <!-- Biens d'usages: Résidence secondaire -->
+    <!-- (Structure similaire à la précédente, répétée pour chaque catégorie et sous-catégorie) -->
+    <tr>
+      <td colspan="16" class="category-header">Immobilier de Rapport</td>
+    </tr>
+    <!-- Biens d'usages: Résidence Principale -->
+    <tr>
+      <td>Immeubles Locatifs</td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+      <td>Immeubles Locatifs</td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+      <td>Part de SCI</td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+      <td>Part de SCPI</td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+      <td>Autres</td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+      <td>Autres</td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <!-- Biens d'usages: Résidence secondaire -->
+    <!-- (Structure similaire à la précédente, répétée pour chaque catégorie et sous-catégorie) -->
+    <tr>
+    <td colspan="16" class="category-header">Immobilier Professionnel</td>
+    </tr>
+    <!-- Biens d'usages: Résidence Principale -->
+    <tr>
+      <td><input type="text"></td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+      <td><input type="text"></td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+    <td colspan="16" class="category-header">Placement foncier</td>
+    </tr>
+    <!-- Biens d'usages: Résidence Principale -->
+    <tr>
+      <td><input type="text"></td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+      <td><input type="text"></td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+    <td colspan="16" class="category-header">Divers</td>
+    </tr>
+    <!-- Biens d'usages: Résidence Principale -->
+    <tr>
+      <td>Autre</td>
+      <td>
+        <select>
+          <option>M.</option>
+          <option>Mme</option>
+          <option>M. et Mme</option>
+          <option>Enfants</option>
+          <option>Indivision</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Pleine propriété</option>
+          <option>Nue propriété</option>
+          <option>Usufruit</option>
+        </select>
+      </td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="date"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+    </tr>
+  </tbody>
+</table>
 

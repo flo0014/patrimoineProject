@@ -1,55 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-interface GarantiesEtRevenus {
-  traitement_salaires: number;
-  bnc: number;
-  bic: number;
-  agricole: number;
-  pension_retraite: number;
-  residence_fiscale: string;
-  soumis_FACTA: boolean;
-  [key: string]: any;
-};
-
 @Component({
   selector: 'app-garanties-et-revenus',
   templateUrl: './garanties-et-revenus.component.html',
   styleUrls: ['./garanties-et-revenus.component.css']
 })
 export class GarantiesEtRevenusComponent implements OnInit {
-
-  garantiesEtRevenus: GarantiesEtRevenus = {
+  garantiesRevenus = {
     traitement_salaires: 0,
     bnc: 0,
     bic: 0,
     agricole: 0,
     pension_retraite: 0,
+    temporaire_deces: 0,
+    vie_entiere_deces: 0,
+    arret_travail: 0,
+    invalidite: 0,
+    sante: 0,
+    dependance: 0,
+    retraite: 0,
+    etude_enfants: 0,
+    GAV: 0,
+    obseques: 0,
+    PJ: 0,
     residence_fiscale: '',
-    soumis_FACTA: false,
+    soumis_facta: false
   };
-
-  items = [
-    'temporaire_deces',
-    'vie_entiere_deces',
-    'arret_de_travail',
-    'invalidite',
-    'sante',
-    'dependance',
-    'retraite',
-    'etude_enfants',
-    'GAV',
-    'obseques',
-    'PJ'
-  ];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
-  ajouterGarantiesEtRevenus() {
-    // Votre logique de POST ici
+  ajouterGarantiesRevenus() {
+    // Logic to add garanties and revenus
   }
 }
 
