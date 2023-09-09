@@ -26,7 +26,7 @@
         - Garanties et Revenus
         - Patrimoine Immmobiler
 
-À venir :
+- À venir :
     - Application de Mateial à la totalite du frontend
     - Mise en place du frontend de la "Phase 2 : Résitution"
     - Travail sur la partie backend lorsque le frontend sera terminé
