@@ -1,18 +1,113 @@
-<form (ngSubmit)="ajouterConnaissancesFinancieres()">
-  <h3>Connaissances Financières et Profil Épargnant:</h3>
+<form>
+  <h3>Objectifs d'épargne</h3>
 
-  <label for="experience_investissement">Expérience en investissement:</label>
-  <input id="experience_investissement" [(ngModel)]="connaissancesFinancieres.experience_investissement" name="experience_investissement">
+  <mat-form-field>
+    <mat-label>Objectif principal pour épargner</mat-label>
+    <mat-select>
+      <mat-option value="retraite">Retraite</mat-option>
+      <mat-option value="achat_immobilier">Achat immobilier</mat-option>
+      <mat-option value="education_enfants">Éducation des enfants</mat-option>
+      <mat-option value="creation_entreprise">Création d'entreprise</mat-option>
+      <mat-option value="autres">Autres</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
 
-  <label for="objectif_investissement">Objectif d'investissement:</label>
-  <input id="objectif_investissement" [(ngModel)]="connaissancesFinancieres.objectif_investissement" name="objectif_investissement">
+  <mat-form-field>
+    <mat-label>Horizon de placement</mat-label>
+    <mat-select>
+      <mat-option value="court_terme">Court terme (< 1 an)</mat-option>
+      <mat-option value="moyen_terme">Moyen terme (1-5 ans)</mat-option>
+      <mat-option value="long_terme">Long terme (> 5 ans)</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <h3>Objectifs d'épargne 2</h3>
+  
+  <mat-form-field>
+    <mat-label>Objectif principal pour épargner</mat-label>
+    <mat-select>
+      <mat-option value="retraite">Retraite</mat-option>
+      <mat-option value="achat_immobilier">Achat immobilier</mat-option>
+      <mat-option value="education_enfants">Éducation des enfants</mat-option>
+      <mat-option value="creation_entreprise">Création d'entreprise</mat-option>
+      <mat-option value="autres">Autres</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
 
-  <label for="horizon_investissement">Horizon d'investissement:</label>
-  <input id="horizon_investissement" [(ngModel)]="connaissancesFinancieres.horizon_investissement" name="horizon_investissement">
+  <mat-form-field>
+    <mat-label>Horizon de placement</mat-label>
+    <mat-select>
+      <mat-option value="court_terme">Court terme (< 1 an)</mat-option>
+      <mat-option value="moyen_terme">Moyen terme (1-5 ans)</mat-option>
+      <mat-option value="long_terme">Long terme (> 5 ans)</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <h3>Objectifs d'épargne 3</h3>
+  
+  <mat-form-field>
+    <mat-label>Objectif principal pour épargner</mat-label>
+    <mat-select>
+      <mat-option value="retraite">Retraite</mat-option>
+      <mat-option value="achat_immobilier">Achat immobilier</mat-option>
+      <mat-option value="education_enfants">Éducation des enfants</mat-option>
+      <mat-option value="creation_entreprise">Création d'entreprise</mat-option>
+      <mat-option value="autres">Autres</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
 
-  <label for="tolerance_risque">Tolérance au risque:</label>
-  <input id="tolerance_risque" [(ngModel)]="connaissancesFinancieres.tolerance_risque" name="tolerance_risque">
+  <mat-form-field>
+    <mat-label>Horizon de placement</mat-label>
+    <mat-select>
+      <mat-option value="court_terme">Court terme (< 1 an)</mat-option>
+      <mat-option value="moyen_terme">Moyen terme (1-5 ans)</mat-option>
+      <mat-option value="long_terme">Long terme (> 5 ans)</mat-option>
+    </mat-select>
+  </mat-form-field>
 
-  <button type="submit">Ajouter</button>
+  <h3>Connaissance et expérience en matière d'épargne et d'investissement</h3>
+
+  <mat-form-field>
+    <mat-label>Avez-vous déjà investi en bourse ?</mat-label>
+    <mat-select>
+      <mat-option value="oui">Oui</mat-option>
+      <mat-option value="non">Non</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Type d'investissement déjà réalisé</mat-label>
+    <mat-select multiple>
+      <mat-option value="actions">Actions</mat-option>
+      <mat-option value="obligations">Obligations</mat-option>
+      <mat-option value="fonds">Fonds d'investissement</mat-option>
+      <mat-option value="immobilier">Immobilier</mat-option>
+      <mat-option value="autres">Autres</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h3>Tolérance au risque</h3>
+
+  <mat-form-field>
+    <mat-label>Comment réagiriez-vous si la valeur de votre investissement diminuait de 20% ?</mat-label>
+    <mat-select>
+      <mat-option value="retirer">Je retirerais tout mon argent</mat-option>
+      <mat-option value="inquiet">Je serais inquiet mais je ne ferais rien</mat-option>
+      <mat-option value="investir_plus">J'investirais plus pour réduire mon coût moyen</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Niveau de risque acceptable</mat-label>
+    <mat-select>
+      <mat-option value="faible">Faible</mat-option>
+      <mat-option value="modere">Modéré</mat-option>
+      <mat-option value="eleve">Élevé</mat-option>
+    </mat-select>
+  </mat-form-field>
+
 </form>
 

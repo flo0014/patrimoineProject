@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-connaissances-financieres',
@@ -7,21 +7,28 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./connaissances-financieres.component.css']
 })
 export class ConnaissancesFinancieresComponent {
+  connaissancesForm: FormGroup;
 
-  connaissancesFinancieres = {
-    experience_investissement: '',
-    objectif_investissement: '',
-    horizon_investissement: '',
-    tolerance_risque: ''
-  };
+  constructor(private fb: FormBuilder) {
+    this.connaissancesForm = this.fb.group({
+      // vos champs de formulaire ici
+    });
+  }
 
-  constructor(private http: HttpClient) {}
+  createForm() {
+    this.connaissancesForm = this.fb.group({
+      objectifEpargne: [''],
+      horizonPlacement: [''],
+      investiBourse: [''],
+      typeInvestissement: [''],
+      reactionValeurDiminue: [''],
+      niveauRisque: [''],
+    });
+  }
 
-  ajouterConnaissancesFinancieres() {
-    this.http.post('http://localhost:5000/api/ajouterConnaissancesFinancieres', this.connaissancesFinancieres)
-      .subscribe(response => {
-        console.log('Connaissances Financières ajoutées:', response);
-      });
+  onSubmit() {
+    console.log('Form Submitted:', this.connaissancesForm.value);
+    // Ici, vous pouvez ajouter la logique pour envoyer ces données au serveur ou les traiter comme vous le souhaitez.
   }
 }
 

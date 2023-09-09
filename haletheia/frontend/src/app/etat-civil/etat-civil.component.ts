@@ -26,6 +26,9 @@ export class EtatCivilComponent implements OnInit {
     date_naissance: '',
     lieu_naissance: '',
     nationalite: '',
+    adresse: '',
+    code_postal: '',
+    ville: '',
     telephone: '',
     email: ''
   };

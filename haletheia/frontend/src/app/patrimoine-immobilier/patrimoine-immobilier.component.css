@@ -52,3 +52,7 @@
   color: #333;
 }
 
+.category-header {
+  font-weight: bold;  /* Rend le texte en gras */
+}
+
